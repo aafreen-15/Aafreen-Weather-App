@@ -1,0 +1,48 @@
+.card {
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 700px;
+  background-color: #ece2e1;
+}
+
+.city {
+  font-size: 38px;
+}
+
+.emoji {
+  font-size: 80px;
+}
+
+.days {
+  font-size: 15px;
+}
+
+.weather {
+  font-size: 20px;
+}
+
+ul {
+  margin: 0 0 10px;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+.temperature {
+  color: rgb(33, 33, 33);
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.searchCity {
+  padding: 5px 0;
+  padding-left: 15px;
+  font-size: 20px;
+  color: black;
+  background-color: transparent;
+  width: 60%;
+  height: 50px;
+  outline: none;
+}
