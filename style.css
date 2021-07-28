@@ -1,8 +1,8 @@
 .card {
   margin: 30px auto;
-  border-radius: 10px;
+  border-radius: 8px;
   max-width: 700px;
-  background-color: #ece2e1;
+  background-color: burlywood;
 }
 
 .city {
