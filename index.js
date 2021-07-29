@@ -32,6 +32,7 @@ function searchCity(city) {
 }
 let form = document.querySelector("form");
 form.addEventListener("submit", search);
+
 //converting temperature
 function convertToFahrenheit(event) {
   event.preventDefault();
@@ -47,6 +48,7 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
 //weather data
 function showTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -58,9 +60,14 @@ function showTemperature(response) {
   currentHumidity.innerHTML = `Humidity: ${humidity}%`;
   let wind = Math.round(response.data.wind.speed);
   let currentWind = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
   currentWind.innerHTML = `Wind: ${wind}km/h`;
   document.querySelector("#condition").innerHTML =
     response.data.weather[0].main;
+  iconElement.setAttribute(
+    "src",
+    "http://openweathermap.org/img/wn/10d@2x.png"
+  );
 }
 function searchLocation(position) {
   let apiKey = "853a11ba7c5104766d458d020002f62f";
