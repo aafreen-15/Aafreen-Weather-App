@@ -60,10 +60,11 @@ function showTemperature(response) {
   currentHumidity.innerHTML = `Humidity: ${humidity}%`;
   let wind = Math.round(response.data.wind.speed);
   let currentWind = document.querySelector("#wind");
-  let iconElement = document.querySelector("#icon");
   currentWind.innerHTML = `Wind: ${wind}km/h`;
   document.querySelector("#condition").innerHTML =
     response.data.weather[0].main;
+  let iconElement = document.querySelector("#icon");
+
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}}@2x.png`
