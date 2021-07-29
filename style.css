@@ -2,7 +2,7 @@
   margin: 30px auto;
   border-radius: 8px;
   max-width: 700px;
-  background-color: #fdefef;
+  background-color: #faebe0;
 }
 
 h1 {
@@ -45,16 +45,7 @@ li {
 }
 
 .searchCity {
-  padding: 5px 0;
-  padding-left: 15px;
-  font-size: 20px;
-  color: black;
-  background-color: transparent;
-  width: 60%;
-  height: 50px;
-  outline: none;
-}
-
-footer {
-  text-align: center;
+  border-radius: 5px;
+  border-color: #cdbba7;
+  line-height: 30px;
 }
