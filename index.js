@@ -40,7 +40,36 @@ form.addEventListener("submit", search);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="weather-forecast-date">${day}</div>
+      <img
+        src="https://icons-for-free.com/iconfiles/png/512/sunny+temperature+weather+icon-1320196637430890623.png"
+        alt=""
+        width="36"
+      />
+      <div class="weather-forecast-temperature">
+        <span class="weather-forecast-temperature-max">18 </span>
+        <span class="weather-forecast-temperature-min">12 </span>
+      </div>
+    </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 displayForecast();
+
 //weather data
 function showTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -75,24 +104,3 @@ changeCity.addEventListener("submit", search);
 let currentLocationButton = document.querySelector("#currentLocation");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 searchCity("Singapore");
-
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
-
-  forecastElement.innerHTML = `
-  <div class="row">
-    <div class="col-2">
-      <div class="weather-forecast-date">Thu</div>
-      <img
-        src="https://icons-for-free.com/iconfiles/png/512/sunny+temperature+weather+icon-1320196637430890623.png"
-        alt=""
-        width="36"
-      />
-      <div class="weather-forecast-temperature">
-        <span class="weather-forecast-temperature-max">18 </span>
-        <span class="weather-forecast-temperature-min">12 </span>
-      </div>
-    </div>
-  </div>;
-  `;
-}
