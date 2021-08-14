@@ -37,11 +37,12 @@ form.addEventListener("submit", search);
 
 //converting temperature
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
-
-  let forecastHTML = `<div class="row">`;
   let days = ["Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHTML = `<div class="row">`;
+
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
@@ -65,7 +66,16 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "853a11ba7c5104766d458d020002f62f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${API key}&unit=metric`;
+  console.log(apiUrl);
+  axios.get(apiurl).then(displayForecast);
+}
+
 displayForecast();
+getForecast(responsse.data.coord);
 
 //weather data
 function showTemperature(response) {
@@ -86,6 +96,8 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForecast(response.data.coords);
 }
 function searchLocation(position) {
   let apiKey = "853a11ba7c5104766d458d020002f62f";
