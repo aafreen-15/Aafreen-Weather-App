@@ -13,6 +13,7 @@ let days = [
 let day = days[now.getDay()];
 let hour = now.getHours();
 let minutes = now.getMinutes();
+
 let today = document.querySelector("#today-date");
 today.innerHTML = `${day} ${hour}:${minutes}`;
 

@@ -23,15 +23,21 @@
     <div class="card">
       <div class="container">
         <form id="searchBar" class="searchBar">
-          <input
-            type="search"
-            placeholder="Enter your city"
-            id="searchCity"
-            class="searchCity"
-            autocomplete="off"
-          />
-          <input type="submit" value="🍳" class="btn btn-primary" />
-          <input type="submit" value="📍" id="currentLocation" />
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter your city"
+                id="searchCity"
+                class="searchCity"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="col-3">
+              <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+          </div>
         </form>
         <br />
         <br />
