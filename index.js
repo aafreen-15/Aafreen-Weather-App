@@ -1,6 +1,5 @@
 //time and day
 let now = new Date();
-let date = now.getDate();
 let days = [
   "Sunday",
   "Monday",
@@ -32,7 +31,7 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  forecasr.forEach(function (forecastDay, index) {
+  forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
       forecastHTML =
         forecastHTML +
@@ -41,17 +40,17 @@ function displayForecast(response) {
       <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
       <img
         src="http://openweathermap.org/img/wn/${
-          forecast.weather[0].icon
+          forecastDay.weather[0].icon
         }@2x.png"
         alt=""
         width="36"
       />
       <div class="weather-forecast-temperature">
         <span class="weather-forecast-temperature-max">${Math.round(
-          forecastDay.showTemperature.max
+          forecastDay.temp.max
         )} </span>
         <span class="weather-forecast-temperature-min">${Math.round(
-          forecastDay.showTemperature.min
+          forecastDay.temp.min
         )} </span>
       </div>
     </div>
@@ -66,12 +65,9 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "853a11ba7c5104766d458d020002f62f";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apikey}&units=metric`;
-  axios.get(apiurl).then(displayForecast);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
-
-displayForecast();
-getForecast(responsse.data.coord);
 
 //search CIty
 function search(event) {
@@ -111,7 +107,7 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 
-  getForecast(response.data.coords);
+  getForecast(response.data.coord);
 }
 function searchLocation(position) {
   let apiKey = "853a11ba7c5104766d458d020002f62f";

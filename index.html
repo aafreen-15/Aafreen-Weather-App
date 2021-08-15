@@ -1,74 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Aafreen's Weather-App</title>
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-    crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="card">
-          <div class="container">
-            <form id="searchBar" class="searchBar">
-              <input
-                type="search"
-                placeholder="Enter your city"
-                id="searchCity"
-                class="searchCity"
-                autocomplete="off"
-              />
-              <input type="submit" value="🍳" class="btn btn-primary">
-              <input type="submit" value="📍" class="currentLocation">
-            </form>
-            <br />
-            <br />
-            <div class="row">
-              <div class="col-4">
-                <h1 id="city"></h1>
-                <h2 id="condition"></h2>
-                <h3 id = "today-date"></h3>
-              </div>
-              <div class="col-3">
-                <img src="" alt="clear" id="icon">
-              </div>
-              <div class="col-4"> 
-                <span class="temperature" id="temperature">19</span
-                ><span class="units">
-                  <a>°C</a> 
-                </span>
-             <p>
-          <ul>
-          <li id="humidity"></li>
-          <li id="wind"></li>
-          </ul>
-             </p>
-             <br>
-
-              </div>
-      
-           <div class="weather-forecast" id="forecast"></div>
-            </div>
+      <div class="container">
+        <form id="searchBar" class="searchBar">
+          <input
+            type="search"
+            placeholder="Enter your city"
+            id="searchCity"
+            class="searchCity"
+            autocomplete="off"
+          />
+          <input type="submit" value="🍳" class="btn btn-primary" />
+          <input type="submit" value="📍" id="currentLocation" />
+        </form>
+        <br />
+        <br />
+        <div class="row">
+          <div class="col-4">
+            <h1 id="city"></h1>
+            <h2 id="condition"></h2>
+            <h3 id="today-date"></h3>
+          </div>
+          <div class="col-3">
+            <img src="#" alt="clear" id="icon" />
+          </div>
+          <div class="col-4">
+            <span class="temperature" id="temperature">19</span
+            ><span class="units">
+              <a>°C</a>
+            </span>
           </div>
         </div>
+
+        <ul>
+          <li id="humidity"></li>
+          <li id="wind"></li>
+        </ul>
+
+        <br />
+
+        <div class="weather-forecast" id="forecast"></div>
       </div>
     </div>
+
+    <footer>
+      <a href="https://github.com/aafreen-15/Aafreen-Weather-App">
+        Open-source code</a
+      >
+      <span>by Aafreen</span>
+    </footer>
     <script src="index.js"></script>
-<footer>
-     <a href="https://github.com/aafreen-15/Aafreen-Weather-App.git"> Open-source code</a>
-by Aafreen
-</footer>
-</body>
+  </body>
 </html>
