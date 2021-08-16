@@ -1,3 +1,8 @@
+body {
+  background-image: url("brown2.jpg");
+  background-color: #deba9d;
+}
+
 .card {
   margin: 30px auto;
   border-radius: 8px;
@@ -41,6 +46,10 @@ li {
   padding: 20px;
   border-radius: 5px;
 }
+
+.btn-primary {
+  background: burlywood;
+}
 .temperature {
   color: rgb(33, 33, 33);
   font-size: 60px;
@@ -52,6 +61,7 @@ li {
   border-radius: 5px;
   border-color: #cdbba7;
   line-height: 30px;
+  width: 100%;
 }
 
 .weather-forecast {
