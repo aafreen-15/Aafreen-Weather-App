@@ -14,6 +14,9 @@ let day = days[now.getDay()];
 let hour = now.getHours();
 let minutes = now.getMinutes();
 
+if (minutes < 10) {
+  minutes = `0${now.getMinutes()}`;
+}
 let today = document.querySelector("#today-date");
 today.innerHTML = `${day} ${hour}:${minutes}`;
 
