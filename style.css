@@ -1,6 +1,5 @@
 body {
-  background-image: url("brown2.jpg");
-  background-color: #deba9d;
+  background-image: url(images/brown2.jpg);
 }
 
 .card {
@@ -48,7 +47,7 @@ li {
 }
 
 .btn-primary {
-  background: burlywood;
+  background: #ba9986;
 }
 .temperature {
   color: rgb(33, 33, 33);
