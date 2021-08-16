@@ -52,7 +52,7 @@ li {
 }
 .temperature {
   color: rgb(33, 33, 33);
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 400;
   line-height: 1;
 }
@@ -79,4 +79,8 @@ li {
 }
 .weather-forecast-temperature {
   font-size: 13px;
+}
+
+footer {
+  text-align: center;
 }
